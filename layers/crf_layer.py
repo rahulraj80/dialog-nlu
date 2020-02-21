@@ -10,7 +10,7 @@ Adapted tensorflow implementation by:
 import tensorflow as tf
 from tensorflow.keras import backend as K
 from tensorflow.keras.layers import Layer, InputSpec
-from tensorflow.contrib.crf import crf_decode
+from tensorflow_addons.text.crf import crf_decode
 
 
 class CRFLayer(Layer):
