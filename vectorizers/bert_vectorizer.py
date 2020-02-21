@@ -23,7 +23,7 @@ class BERTVectorizer:
     def create_tokenizer_from_hub_module(self, is_bert):
         """Get the vocab file and casing info from the Hub module."""
         bert_module =  hub.load(self.bert_model_hub_path)
-        tokenization_info = bert_module(signature="tokenization_info", as_dict=True)
+        tokenization_info = bert_module.signatures["tokenization_info"](as_dict=True)
         vocab_file, do_lower_case = self.sess.run(
             [
                 tokenization_info["vocab_file"],
