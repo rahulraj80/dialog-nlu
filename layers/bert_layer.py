@@ -6,7 +6,7 @@ Edited by mwahdan
 """
 
 import tensorflow as tf
-import tensorflow.python.keras.backend as K
+import tensorflow.keras.backend as K
 import tensorflow_hub as hub
 
 
